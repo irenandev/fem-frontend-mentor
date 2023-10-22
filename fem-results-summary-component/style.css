@@ -164,7 +164,6 @@ body {
 .-bgRed {
   background-color: var(--clr--light-red-bg);
   color: var(--clr--light-red);
-  border-width: 1em;
 }
 
 .-bgYellow {
@@ -183,7 +182,6 @@ body {
 }
 
 .main-btn {
-  /* display: inline-block; */
   background-color: var(--clr-dark-gray-blue);
   color: var(--clr-white);
   text-align: center;
