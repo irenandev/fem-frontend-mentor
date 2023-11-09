@@ -1,0 +1,161 @@
+:root {
+  --ff-title: 'Big Shoulders Display', sans-serif;
+  --ff-default: 'Lexend Deca', sans-serif;
+  
+  font-size: 62.5%;
+  --fs-default: 1.5rem;
+  --fs-title: 4rem;
+  
+  --fw-400: 400;
+  --fw-700: 700;
+  
+  --clr-bright-orange: hsl(31, 77%, 52%);
+  --clr-dark-cyan: hsl(184, 100%, 22%);
+  --clr-very-dark-cyan: hsl(179, 100%, 13%);
+  --clr-transparen-white: hsla(0, 0%, 100%, 0.75);
+  --clr-very-light-gray: hsl(0, 0%, 95%);
+
+  --ff-btn: var(--ff-default);
+  --fs-btn: 1.5rem;
+  --clr--btn-text: var(--clr-very-light-gray);
+  --clr--btn-border: var(--clr-very-light-gray);
+  --clr--btn-bg: var(--clr-very-light-gray);
+
+  --clr--background: var(--clr-very-light-gray);
+  --clr-box-shadow: hsla(217, 45%, 22%, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-default);
+  font-size: var(--fs-default);
+  font-weight: var(--fw-400);
+  background-color: var(--clr--background);
+  display: grid;
+  place-content: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(29rem, 1fr);
+  margin: 1rem;
+  border-radius: 1rem;
+  box-shadow: .1rem .5rem 1rem var(--clr-box-shadow);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  margin-bottom: 3.5rem;
+}
+
+h1 {
+  font-family: var(--ff-title);
+  font-size: var(--fs-title);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+  color: var(--clr-very-light-gray);
+}
+
+p {
+  margin-block: 2.6rem 2.4rem ;
+  line-height: 2.5rem;
+}
+
+.card-car {
+  padding: 4.8rem;
+  color: var(--clr-transparen-white);
+}
+
+.card-car.--sedans {
+  background-color: var(--clr-bright-orange);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+
+.card-car.--suvs {
+  background-color: var(--clr-dark-cyan);
+}
+
+.card-car.--luxury {
+  background-color: var(--clr-very-dark-cyan);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--ff-btn);
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-400);
+  background-color: var(--clr--btn-bg);
+  padding: 1.5rem 3.2rem;
+  border-radius: 5rem;
+  border: .2rem solid var(--clr-very-light-gray);
+  transition: background 250ms ease-out;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.button-link:focus,
+.button-link:hover {
+  background: transparent;
+}
+
+.--sedans .button-link {
+  color: var(--clr-bright-orange);
+  transition: color 250ms ease-out;
+}
+.--sedans .button-link:focus,
+.--sedans .button-link:hover {
+  color: var(--clr-very-light-gray);
+}
+
+.--suvs .button-link {
+  color: var(--clr-dark-cyan);
+  transition: color 350ms ease-out;
+}
+.--suvs .button-link:focus,
+.--suvs .button-link:hover {
+  color: var(--clr-very-light-gray);
+}
+
+.--luxury .button-link {
+  color: var(--clr-very-dark-cyan);
+  transition: color 350ms ease-out;
+}
+.--luxury .button-link:focus,
+.--luxury .button-link:hover {
+  color: var(--clr-very-light-gray);
+}
+
+@media (min-width: 45em) {
+
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 91.7rem;
+  }
+
+  p {
+    margin-bottom: 4.7rem;
+  }
+
+  .card-car.--sedans {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1rem;
+  }
+  .card-car.--luxury {
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 0;
+  }
+}
