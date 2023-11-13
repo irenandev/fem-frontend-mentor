@@ -76,6 +76,7 @@ h2 {
   margin-top: 3rem;
   border-radius: .5rem;
   transition: opacity 230ms ease-out;
+  box-shadow: .1rem .3rem 1rem var(--clr-box-shadow);
 }
 
 .btn-sign-up:focus,
