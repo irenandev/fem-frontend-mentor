@@ -191,4 +191,8 @@ h1 {
     ;
     gap: 2.4rem 3rem;
   }
+
+  .--bg-purple::before {
+    padding-right: 8rem;
+  }
 }
