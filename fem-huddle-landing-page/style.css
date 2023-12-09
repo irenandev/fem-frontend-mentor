@@ -351,6 +351,10 @@ footer .footer-logo {
 
 @media (min-width: 52em) {
 
+  h2 {
+    font-size: var(--fs-800);
+  }
+
   header {
     padding-block: 5.4rem 7rem;
   }
