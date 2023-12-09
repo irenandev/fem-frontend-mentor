@@ -248,6 +248,7 @@ footer .footer-logo {
   display: grid;
   grid-template-columns: repeat(3, min-content);
   gap: 1.5rem;
+  justify-content: center;
 }
 
 .facebook {
