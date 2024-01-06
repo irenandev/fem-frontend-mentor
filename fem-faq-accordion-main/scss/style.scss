@@ -1,0 +1,111 @@
+@use 'global' as *;
+
+body {
+  background-image: url('../assets/images/background-pattern-mobile.svg');
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: $bg-color;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding-inline: 2.4rem;
+
+  @include desktop {
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+    background-size: auto;
+  }
+}
+
+.faq-card {
+  background-color: $white;
+  padding: 2.4rem;
+  border-radius: 1rem;
+  max-width: 60rem;
+  box-shadow: 0 .4rem 1.8rem 1.2rem rgba(0, 0, 0, 0.09);
+
+  @include desktop {
+    padding: 4rem;
+  }
+
+  h1 {
+    font-size: $fs-main-title-m;
+
+    @include desktop {
+      font-size: $fs-main-title-d;
+    }
+
+    &::before {
+      content: url('../assets/images/icon-star.svg');
+      display: inline-block;
+
+      margin-right: 2.4rem;
+      transform: translateY(.2rem);
+
+      @include desktop {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  hr {
+    border: .02rem solid $bg-color;
+  }
+}
+
+.card-accordion {
+  margin-block: 2.5rem;
+
+  &.active .button {
+    background-image: url('../assets/images/icon-minus.svg');
+  }
+
+  &.active {
+    .card-accordion-answer {
+      display: block;
+    }
+  }
+
+  &:nth-last-child(1) {
+  margin-bottom: 0;
+  }
+
+  &-title {
+    font-size: $fs-sub-title-m;
+    transition: color 250ms ease-in-out;
+    cursor: pointer;
+    @include desktop {
+      font-size: $fs-sub-title-d;
+    }
+
+    &:hover {
+      color: $purple;
+    }
+  }
+
+  &-question {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    align-items: center;
+    gap: 2rem;
+
+    .button {
+      background-image: url('../assets/images/icon-plus.svg');
+      width: 3rem;
+      height: 3.1rem;
+    }
+  }
+
+  &-answer {
+    display: none;
+    font-size: $fs-text-m;
+    color: $text-color;
+    line-height: 1.6;
+    margin-top: 2.5rem;
+
+    @include desktop {
+      font-size: $fs-text-d;
+    }
+  }
+}
