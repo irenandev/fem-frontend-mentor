@@ -24,6 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
+![](./design/desktop-preview.jpg)
+
 ### Links
 
 - Solution URL: [Github Repo](https://github.com/irenanrodrigues/fem-frontend-mentor/tree/main/fem-faq-accordion-main)
